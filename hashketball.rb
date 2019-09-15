@@ -227,7 +227,7 @@ end
 def most_points_scored
   most_points = 0
   mvp = ''
-  game_hash.each do |home_away, keys|
+  game_hash.each do |place, keys|
     keys[:players].each do |player|
       points = player[:points]
       if points > most_points
