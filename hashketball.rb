@@ -228,7 +228,7 @@ def most_points_scored
   most_points = 0
   mvp = ''
   game_hash.each do |place, team|
-    team[:players].each do |player|
+    [:players].each do |player|
       points = player[:points]
       if points > most_points
         most_points = points
@@ -257,8 +257,8 @@ end
 def player_with_longest_name
   longest = ''
   longest_length = 0
-  game_hash.each do |place, team|
-    team[:players].each do |player|
+  game_hash.each do |home_away, keys|
+    keys[:players].each do |player|
       name_length = player[:name].length
       longest, longest_length = player[:name], name_length if name_length > longest_length
     end
