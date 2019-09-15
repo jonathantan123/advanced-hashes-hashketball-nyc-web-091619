@@ -212,9 +212,9 @@ stats
   big_shoe = 0
   rebounds = 0
   game_hash.each do |place, team|
-    binding.pry
+
     team[:players].each do |player|
-         binding.pry
+
       if player[:shoe] > big_shoe
         big_shoe = player[:shoe]
         rebounds = player[:rebounds]
